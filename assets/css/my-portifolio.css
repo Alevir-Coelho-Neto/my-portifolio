@@ -1,0 +1,280 @@
+:root {
+  --primary-color: #03235e;
+  --secondary-color: #ff8000;
+}
+
+.menu-fixo{
+  display: flex;
+  min-height: 82.18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.7);
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+.menu ul{
+  display: flex;
+}
+
+.menu ul li a{
+  display: block;
+  position: relative;
+  color: white;
+  margin-left: 67px;
+  font-size: 1rem;
+  background-clip: text;
+  transition: 0.7s  ease-in-out;
+}
+
+.menu ul li a::after{
+  content: '';
+  transition: 0.5s all ease-in-out;
+  position: absolute;
+}
+
+.menu ul li a:hover{
+  color: #ccc;
+  transform: scale(1.2);
+}
+
+.menu ul li a.after::after{
+  bottom: -0.30em;
+  height: 0.1rem;
+  width: 0;
+  background: #ccc;
+}
+
+.menu ul li a.third::after{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu ul li a.after:hover::after{
+  width: 100%;
+}
+
+.logo-nav a{
+  display: block;
+  font-size: 30px;
+  color: white;
+  font-family: "Sacramento", cursive;
+  margin-top: 12px;
+  transition: 0.7s  ease-in-out;
+}
+
+.logo-nav a:hover{
+  color: #ccc;
+}
+
+/* ------------------- Fechamento Menu -------------------*/
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 860px;
+  margin: 0 auto;
+  height: 100vh;
+  color: white;
+  padding-top: 5.6rem;
+}
+
+.img-home img{
+  width: 251px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.home span.hello{
+  font-size: 3rem;
+  letter-spacing: 1px;  
+}
+
+.home h3{
+  letter-spacing: 1px;
+  margin-top: -0.5rem;
+}
+
+.home h3 > .write{
+  background: linear-gradient(to right, #FF8660, #9A33FF);
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.home h3 .write::before{
+  content: "";
+  background: linear-gradient(to right, #FF8660, #9A33FF);
+  background-size: text;
+  background-clip: text;
+  animation: palavras 20s infinite;
+}
+
+.home h3 .write::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid #ff75b8;
+  right: -10px;
+  animation: cursor .8s infinite, digita 20s infinite steps(15);
+  width: calc(100% + 18px);
+  background-color: #161513;
+}
+
+@keyframes cursor{
+  0%{
+    border-left: 2px solid #161513;
+  }
+}
+
+@keyframes palavras{
+  0%,20%{
+    content: "Front-End";
+  }
+  21%,40%{
+    content: "Angular";
+  }
+  41%,60%{
+    content: "Júnior";
+  }
+  61%,80%{
+    content: "Freelancer";
+  }
+  81%,100%{
+    content: "UI/UX";
+  }
+}
+
+@keyframes digita{
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 80%, 85%, 90%, 95%{
+    width: 0;
+  }
+
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    width: calc(100% + 18px);
+  }
+
+}
+
+.about-me{
+  font-size: 15px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  max-width: 560px;
+  text-align: center;
+  color: #C5C5C5;
+}
+
+.buttons-contact{
+  display: flex;
+  margin-top: 3.5rem;
+}
+
+.contact-me a,
+.download-cv a{
+  display: block;
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem 1.7rem;
+  border-radius: 40px;
+  font-weight: bold;
+  transition: 0.7s  ease-in-out;
+  margin: 0rem 1rem;
+  transform: perspective(1px) translateZ(0);
+  border: 2px solid white;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9)
+}
+
+.contact-me a{
+  color: #161513;
+  background: white;
+}
+
+.contact-me a:hover,
+.download-cv a:hover{
+  transform: scale(1.1);
+  background: linear-gradient(to right, #FF8660, #9A33FF);
+  color: #161513;
+  
+}
+
+.download-cv a::before, .contact-me a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #FF8660, #9A33FF);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.download-cv a:hover::before,
+.download-cv a:focus::before,
+.download-cv a:active::before,
+.contact-me a:hover::before,
+.contact-me a:focus::before,
+.contact-me a:active::before {
+  transform: scaleX(1);
+}
+
+.download-cv a:hover,
+.download-cv a:focus,
+.download-cv a:active {
+  color: #161513;
+}
+
+.experience h1{
+  margin-top: -13rem;
+  font-size: 17px;
+  color: #C5C5C5;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2.4px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.icons-experiences{
+  display: flex;
+  justify-content: space-around;
+  min-width: 500px;
+  background: linear-gradient(180deg, #fafafa 0%, #4d4d4d 100%);
+  background-clip: text;
+  
+}
+
+.icons-experiences i{
+  font-size: 42px;
+  color: transparent;
+}
+
+.projects h3{
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(45deg, #FF8660, #D5491D);
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  font-size: 2rem;
+}
