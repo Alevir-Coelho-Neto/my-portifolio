@@ -227,7 +227,6 @@
   font-weight: bold;
   transition: 0.7s ease-in-out;
   margin: 0rem 1rem;
-  transform: perspective(1px) translateZ(0);
   border: 2px solid white;
   outline: none;
   position: relative;
@@ -282,7 +281,7 @@
   max-width: 500px;
   width: 100%;
   margin-bottom: 5rem;
-  
+
 }
 
 .experience h2 {
@@ -309,7 +308,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.icons-experiences i:hover{
+.icons-experiences i:hover {
   color: #c5c5c5;
 }
 
@@ -332,7 +331,7 @@
   margin-bottom: 3rem;
 }
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
@@ -346,20 +345,21 @@
   height: 230px;
 }
 
-.grid-img img{
+.grid-img img {
   width: 100%;
   height: 100%;
   border-radius: inherit;
   transition: transform 0.8s ease-in-out;
 }
 
-.grid-img:hover img{
+.grid-img:hover img {
   transform: scale(1.1);
-  
+
 }
 
 .grid-img:hover .overlay {
-  opacity: 1; /* Mostra o overlay ao passar o mouse */
+  opacity: 1;
+  /* Mostra o overlay ao passar o mouse */
 }
 
 .overlay {
@@ -368,21 +368,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semitransparente */
+  background: rgba(0, 0, 0, 0.7);
+  /* Semitransparente */
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  opacity: 0; /* Inicialmente oculto */
-  transition: opacity 1s ease-in-out; /* Transição suave */
-  border-radius: 30px; /* Alinhar com a borda da imagem */
+  opacity: 0;
+  /* Inicialmente oculto */
+  transition: opacity 1s ease-in-out;
+  /* Transição suave */
+  border-radius: 30px;
+  /* Alinhar com a borda da imagem */
   cursor: pointer;
   letter-spacing: 1px;
   padding-top: 10px;
 }
 
-.overlay h2{
+.overlay h2 {
   color: transparent;
   background: red;
   background-clip: text;
@@ -391,21 +395,123 @@
   font-weight: bold;
 }
 
-.overlay p{
+.overlay p {
   font-size: 0.7rem;
   text-align: center;
   padding: 0 20px;
 }
 
-.icons-links i{
+.icons-links i {
   margin-top: 25px;
   font-size: 2rem;
   color: white;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   padding: 10px;
 }
 
-.icons-links .icon-ancora{
+.icons-links i:hover {
+  transform: scale(1.1);
+}
+
+.icons-links .icon-ancora {
   font-size: 1.5rem;
 }
 
+/*<--Footer-->*/
+
+footer {
+  background-color: #191919;
+}
+
+.content-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+
+}
+
+footer h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+footer p {
+  color: #C5C5C5;
+  font-size: 1rem;
+  max-width: 65%;
+}
+
+.contact-footer {
+  color: #c5c5c5;
+  margin-top: 2.4rem;
+}
+
+.email-for-contact {
+  font-size: 1.1rem;
+}
+
+.email-for-contact span a{
+  color: #C5C5C5;
+}
+
+/*-----------*/
+
+.contact-footer {
+  position: relative;
+}
+
+.contact-footer .my-gmail {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+.contact-footer .my-gmail::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 0.1rem;
+  background-color: #ccc;
+  transition: width 0.7s ease;
+  transform: translateX(-50%);
+}
+
+.contact-footer .my-gmail:hover::after {
+  width: 100%;
+}
+
+/*--------------------*/
+
+.email-for-contact .my-gmail {
+  cursor: pointer;
+  max-width: 270px;
+}
+
+.email-for-contact i {
+  color: white;
+}
+
+.social-media-icons {
+  display: flex;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: white
+}
+
+.social-media-icons i {
+  cursor: pointer;
+  margin-right: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+  transform-origin: center;
+}
+
+.social-media-icons i:hover {
+  transform: scale(1.3);
+}
