@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,6 @@
   <link rel="stylesheet" href="./assets/css/fonts-import.css">
   <link rel="stylesheet" href="./assets/css/my-portifolio.css">
   <link rel="stylesheet" href="./assets/css/global-styles.css">
-  <link rel="stylesheet" href="./assets/css/scrollbar.css">
   <script src="https://kit.fontawesome.com/82cdb52a5d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -57,7 +57,7 @@
           <i class="fa-brands fa-node"></i>
         </div>
       </section>
-      <section class="projects ">
+      <section class="projects">
         <h3>Projects</h3>
         <article class="grid">
           <div class="grid-img">
@@ -243,29 +243,92 @@
       </section>
     </section>
 
-    <section>
-      <h2>Contato</h2>
-      <!-- Formulário de contato ou informações de contato -->
+    <!-- -->
+    <section id="contact" class="section-contact">
+      <div class="talk-to-me">
+        <h2>Talk to Me</h2>
+        <p>Are there any questions left? Fill in the fields below with the following information and I will contact you
+          shortly.</p>
+      </div>
+
+      <form>
+        <legend class="legend-accessible">Contact me</legend>
+        <div class="grid-form">
+          <div>
+            <label for="nome"><i class="fa-solid fa-user"></i><span class="label-content">Your Name (*)</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Your name" required autocomplete="off">
+          </div>
+
+          <div>
+            <label for="email"><i class="fa-solid fa-envelope"></i><span class="label-content">E-mail (*)</span></label>
+            <input type="email" id="email" name="email" placeholder="email@email.com" required autocomplete="off">
+          </div>
+
+          <div>
+            <label for="tel"><i class="fa-solid fa-phone"></i><span class="label-content">Telefone</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="(00) 0000-0000" pattern="\(\d{2}\) \d{4}-\d{4}"
+              autocomplete="off">
+          </div>
+
+          <div>
+            <label for="text"><i class="fa-solid fa-pen"></i><span class="label-content">Assunto (*)</span></label>
+            <input type="text" id="text" name="text" required autocomplete="off" placeholder="Type here">
+          </div>
+
+          <div>
+            <label for="textarea"><i class="fa-solid fa-message"></i><span class="label-content">Message
+                (*)</span></label>
+            <textarea name="textarea" id="textarea" placeholder="Write your message here" required
+              autocomplete="off"></textarea>
+          </div>
+
+          <div>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> <span
+                class="label-content">Enviar</span></button>
+          </div>
+        </div>
+      </form>
+
     </section>
+
+
+
+    <!-- -->
   </main>
 
   <footer>
     <div class="content-footer">
-    <h2>Contact</h2>
-    <p>Seasoned Full Stack Software Engineer with over 8 years of hands-on experience in designing and implementing robust, scalable, and innovative web solutions. Adept at leveraging a comprehensive skill set encompassing front-end and back-end technologies </p>
-    <address class="contact-footer">
-      <div class="email-for-contact">
-        <i class="fa-regular fa-envelope"></i>
-        <span class="my-gmail"><a target="_blank" href="mailto:alevircoelhoneto1@gmail.com?subject=Gostaria+de+contratar+seus+servi%C3%A7os">alevircoelhoneto1@gmail.com</a></span>
-      </div>
-      <div class="social-media-icons">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-whatsapp"></i>
-      </div>
-    </address>
-  </div>
+      <h2>Contact</h2>
+      <p>Seasoned Full Stack Software Engineer with over 8 years of hands-on experience in designing and implementing
+        robust, scalable, and innovative web solutions. Adept at leveraging a comprehensive skill set encompassing
+        front-end and back-end technologies </p>
+      <address class="contact-footer">
+        <div class="email-for-contact">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="my-gmail"><a target="_blank"
+              href="mailto:alevircoelhoneto1@gmail.com?subject=Gostaria+de+contratar+seus+servi%C3%A7os">alevircoelhoneto1@gmail.com</a></span>
+        </div>
+        <div class="social-media-icons">
+          <div>
+            <a href="https://www.instagram.com/levi.devs/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://x.com/LEVI_DEV7" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://bit.ly/contact-me7" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </address>
+    </div>
   </footer>
 
 </body>
+
 </html>

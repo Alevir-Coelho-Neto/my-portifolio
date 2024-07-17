@@ -50,4 +50,17 @@ body {
   .primary-color{
     color: var(--primary-color);
   }
+
+  fieldset {
+    border: none;
+  }
+
+  legend {
+    color: transparent;
+    
+  }
+
+  label{
+    display: block;
+  }
   
